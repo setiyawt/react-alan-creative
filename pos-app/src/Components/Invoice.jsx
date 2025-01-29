@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUserCircle, faList, faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle, faList, faCaretDown, faFilePen } from '@fortawesome/free-solid-svg-icons';
 
 function Customer () {
     return (
@@ -32,7 +32,12 @@ function Dinein() {
     )
 }
 
+function calculateTotal(orders) {
+    return orders.reduce((acc, order) => acc + (order.price * order.quantity), 0);
+}
+
 function Order({ orders }) {
+    const total = calculateTotal(orders);
     return (
         <div className="container-menu">
             <div className="order">
@@ -63,17 +68,19 @@ function Order({ orders }) {
                 </div>
                 <div></div>
                 <div className="price">
-                    <p>Rp {orders.reduce((acc, order) => acc + (order.price * order.quantity), 0).toLocaleString()}</p>
+                    <p>Rp {total.toLocaleString()}</p>
                 </div>
                 <div className="menu">
                     <p>Total : </p>
                 </div>
                 <div></div>
                 <div className="price">
-                    <p>Rp {orders.reduce((acc, order) => acc + (order.price * order.quantity), 0).toLocaleString()}</p>
+                    <p>Rp {total.toLocaleString()}</p>
                 </div>
             </div>
+            
         </div>
+        
     );
 }
 
@@ -90,14 +97,19 @@ function Clear() {
     );
 }
 
-function Button() {
+function Button({ orders }) {
+    const total = calculateTotal(orders);
     return (
         <>
         <div className="btn">
             <button>Save Bill</button>
             <button>Print Bill</button>
         </div>
-        
+        <div className="btn-charge">
+            <button className="btn-icon"><FontAwesomeIcon className="icon-charge" icon={faFilePen} /> Edit</button>
+                
+            <button className="charge">Charge Rp. {total.toLocaleString()}</button>
+        </div>
         </>
     )
 }

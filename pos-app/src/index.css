@@ -3,10 +3,12 @@
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 0.5fr;
+  
 }
 
 .card {
-  border: 1px solid rgb(235, 235, 234);
+  border: 1px solid #872341;
+  background-color: #E17564;
   border-radius: 10px;
   max-width: 200px;
   text-align: center;
@@ -25,7 +27,6 @@
 }
 
 .product {
-  background-color: rgb(255, 255, 0);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 20px;
@@ -42,11 +43,10 @@
 
 
 .invoice {
-  background-color: lightblue;
+  background-color: #E17564;
 }
 
 .customer {
-  background-color: rgb(255, 102, 0);
   display: grid;
   grid-template-rows: 60px auto;
   grid-template-columns: 15% 70% 15%;
@@ -54,7 +54,6 @@
 }
 
 .customer .customer-icon {
-  background-color: blueviolet;
   align-items: center;
   justify-content: center; 
   flex-direction: column;
@@ -70,6 +69,7 @@
 
 .customer .customer-name {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .cust-name {
@@ -87,12 +87,12 @@
 }
 
 .customer .select-icon {
-  background-color: blueviolet;
+
   max-height: 60px;
 }
 
 .dinein {
-  background-color: chocolate;
+  font-family: Arial, Helvetica, sans-serif;
   display: grid;
   align-items: center;  
   height: 40px;
@@ -123,10 +123,18 @@
 }
 
 .order .menu {
-  background-color: rgb(79, 245, 88);
   padding-left: 10px;
   margin: 0;
+}
 
+.order .menu a {
+  text-decoration: none;
+  color: #111
+}
+
+.order .price a {
+  text-decoration: none;
+  color: #111;
 }
 
 .menu p {
@@ -138,41 +146,74 @@
 }
 
 .order .quantity {
-  background-color: rgb(255, 129, 80);
   padding: 10px;
 }
 
 .order .price {
-  background-color: yellow;
   text-align: right;
   padding: 10px;
 }
 
 .clear {
-  background-color: brown;
   display: flex;
   justify-content: center;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  margin: 2px;
+  color: white;
+  border: 1px solid #fff;
 }
 
 .blank-space {
-  background-color: blueviolet;
   height: 30px;
-  margin: 2px;
+  border: 1px solid #fff;
 }
 
 .btn {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
+  border: 1px solid #fff;
   height: 40px;
 }
 
 .btn button {
   cursor: pointer;
-  background-color: #04AA6D;
+  background-color: #872341;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
   border: none;
-  margin: 2px;
+}
+
+.btn-charge {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  height: 50px;
+  border: 1px solid #fff;
+}
+
+.btn-icon {
+  display: grid;
+  text-align: center;
+  justify-content:center;
+  color: white;
+  cursor: pointer;
+  background-color: #09122C;
+  border: none;
+  margin: 0px 2px 0px 0px;
+}
+
+.icon-charge {
+  width: 30px;
+  height: 30px;
+  padding-bottom: 2px;
+}
+
+.charge {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  cursor: pointer;
+  background-color: #09122C;
+  border: none;
+
 }
