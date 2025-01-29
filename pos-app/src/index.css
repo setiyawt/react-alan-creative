@@ -50,7 +50,7 @@
   display: grid;
   grid-template-rows: 60px auto;
   grid-template-columns: 15% 70% 15%;
-  
+  margin: 2px;
 }
 
 .customer .customer-icon {
@@ -96,6 +96,7 @@
   display: grid;
   align-items: center;  
   height: 40px;
+  margin: 2px;
 }
 
 .dropdown { 
@@ -110,10 +111,15 @@
   margin: auto;
 }
 
+.container-menu {
+  margin: 2px;
+}
+
 .order {
   display: grid;
   grid-template-columns: 60% 15% 25%;
   grid-template-rows: 40px auto;
+  
 }
 
 .order .menu {
@@ -144,6 +150,29 @@
 
 .clear {
   background-color: brown;
-  margin: 0;
-  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 2px;
+}
+
+.blank-space {
+  background-color: blueviolet;
+  height: 30px;
+  margin: 2px;
+}
+
+.btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+  height: 40px;
+}
+
+.btn button {
+  cursor: pointer;
+  background-color: #04AA6D;
+  border: none;
+  margin: 2px;
 }

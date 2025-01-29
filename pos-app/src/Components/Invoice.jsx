@@ -34,7 +34,7 @@ function Dinein() {
 
 function Order({ orders }) {
     return (
-        <div>
+        <div className="container-menu">
             <div className="order">
                 <div className="menu">
                     <a className= "no-table" href="#">1</a>
@@ -79,12 +79,29 @@ function Order({ orders }) {
 
 function Clear() {
     return (
+        <>
         <div className="clear">
-            <h1>Hi</h1>
+            <p>Clear Sale</p>
         </div>
+        <div className="blank-space">
+            
+        </div>
+        </>
     );
+}
+
+function Button() {
+    return (
+        <>
+        <div className="btn">
+            <button>Save Bill</button>
+            <button>Print Bill</button>
+        </div>
+        
+        </>
+    )
 }
 
 
 
-export { Customer, Dinein, Order, Clear};
+export { Customer, Dinein, Order, Clear, Button};

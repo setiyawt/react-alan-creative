@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import ProductList from './ProductList';
-import { Customer, Dinein, Order, Clear } from './Invoice';
+import { Customer, Dinein, Order, Clear, Button } from './Invoice';
 import nasigoreng from '../assets/nasigoreng.jpg';
 import sotoayam from '../assets/sotoayam.jpg';
 
@@ -46,6 +46,7 @@ const Main = () => {
         <Dinein></Dinein>
         <Order orders={orders} ></Order>
         <Clear></Clear>
+        <Button></Button>
       </div>
     </div>
   );
